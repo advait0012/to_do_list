@@ -17,14 +17,20 @@ function addTasks() {
   } else {
     const li = document.createElement("li");
     li.textContent += input.value;
+    li.addEventListener("click", () => {
+      if (li.style.textDecoration === "line-through") {
+        li.style.textDecoration = "none";
+      } else {
+        li.style.textDecoration = "line-through";
+      }
+    });
     tasksList.appendChild(li);
-    li.style.margin = "2rem 0 0 0";
-    li.style.listStyleType = "none";
-    li.style.border = "1px solid #FF6500"
-    li.style.padding = "0.3rem 0 0.4rem 2rem";
-    li.style.boxShadow = "3px 3px 1px #FF6500"
-    li.style.borderRadius = "0.5rem"
-    li.style.width = "22rem"
-    input.value = "";
+    const span = document.createElement("span");
+    span.textContent = "X";
+    span.addEventListener("click", () => {
+      tasksList.removeChild(li);
+    });
+    li.appendChild(span);
   }
+  input.value = "";
 }

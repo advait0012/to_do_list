@@ -8,7 +8,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-.flex{
+.flex {
   display: flex;
 }
 
@@ -16,7 +16,7 @@ body {
   height: 100vh;
   width: 100vw;
   font-family: Lato;
-  background: #1E3E62;
+  background: #1e3e62;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -24,51 +24,54 @@ body {
   overflow-x: hidden;
 }
 
-main{
+main {
   width: 26rem;
-  background: #000000;
+  background: #000;
   border-radius: 0.5rem;
-  color: #FF6500;
+  color: #ff6500;
   padding: 2rem;
   position: relative;
 }
 
-.header{
+.header {
   display: flex;
   justify-content: start;
   align-items: center;
   margin-bottom: 1.2rem;
 }
 
-.heading{
+.heading {
   font-size: 1.7rem;
   margin-right: 1rem;
 }
 
-input{
+input {
   height: 3.3rem;
   width: 20rem;
-  border-radius:2rem;
-  padding-left:1rem;
+  border-radius: 2rem;
+  padding-left: 1rem;
   border: none;
   outline: none;
   background-color: rgb(232, 232, 232);
   font-size: 1rem;
   font-family: Lato;
+  background-color: black;
+  border: 1px solid #ff6500;
+  color: #ff6500;
 }
 
-button{
+button {
   height: 3.3rem;
-  width:6rem;
-  position:absolute;
-  border-radius:2rem;
-  top:5.24rem;
-  left:18rem;
-  bottom:0;
-  right:0;
+  width: 6rem;
+  position: absolute;
+  border-radius: 2rem;
+  top: 5.24rem;
+  left: 18rem;
+  bottom: 0;
+  right: 0;
   border: none;
   outline: none;
-  background-color: #FF6500;
+  background-color: #ff6500;
   color: white;
   font-weight: 500;
   font-size: 1rem;
@@ -76,3 +79,48 @@ button{
   cursor: pointer;
 }
 
+.taskLists {
+  margin-left: 2rem;
+  width: 22rem;
+}
+
+.lists > li {
+  margin-top: 2rem;
+  list-style-type: none;
+  border: 1px solid #ff6500;
+  padding: 0.3rem 0 0.4rem 0.5rem;
+  box-shadow: 3px 3px 1px #ff6500;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: 18rem;
+  position: relative;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    height: 8px; /* Width of the scrollbar */
+  }
+
+  &::-webkit-scrollbar-track {
+    width: 2px;
+    background: #f1f1f1; /* Background of the scrollbar track */
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 2px;
+    background: #888; /* Color of the scrollbar handle */
+    border-radius: 10px; /* Rounded corners */
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #ff6500; /* Color when hovering */
+  }
+}
+
+.lists > li > span {
+  position: absolute;
+  left: 16rem;
+  bottom: 0;
+  top: 0.3rem;
+  right: 0;
+  cursor: pointer;
+}
