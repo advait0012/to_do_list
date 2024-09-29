@@ -1,4 +1,4 @@
-import "./styles/styles.scss";
+
 
 const input = document.querySelector(".inputTask");
 const btnEl = document.querySelector(".addTasks");
